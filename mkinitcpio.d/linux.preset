@@ -1,0 +1,12 @@
+# mkinitcpio preset file for the 'nobara kernel' package
+
+ALL_config="/etc/mkinitcpio.conf"
+ALL_kver="/boot/vmlinuz-linux-fsync-nobara-bin"
+ALL_microcode=(/boot/*-ucode.img)
+
+PRESETS=('default' 'fallback')
+
+default_image="/boot/initramfs-linux-fsync-nobara-bin.img"
+
+fallback_image="/boot/initramfs-linux-fsync-nobara-bin-fallback.img"
+fallback_options="-S autodetect"
